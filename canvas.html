@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Canvas et jQuery</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<!--Mise en place du style-->
+	<style type="text/css">
+		canvas {  border: solid 3px black; background-color: #5b47ef; margin-top: 150px; }
+.container button { height: 40px; background-color: rgba(191, 167, 226,0.8); border-radius: 15px; border: none;margin-bottom: -50px; margin-top: 70px; }
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+		<button onclick="pex()">Changer taille</button>
+		<button onclick="color()">changer couleur</button>
+		<button onclick="origin()">Couleur origine</button>
+		<button>Cliquez ici</button>
+		<button>Cliquez ici</button>
+		<figure>
+		<canvas id="bloc" height="300" width="300"></canvas>
+		</figure>
+	</div>
+
+
+<script type="text/javascript">
+	var canvas = document.querySelector('#bloc');
+	var rectangle = canvas.getContext('2d');
+	
+
+	let x = 0;
+
+   rectangle.fillStyle = "#efde47";
+	rectangle.fillRect(0,0,300,10);
+
+	
+
+	
+	//changer la taille du canvas
+	function pex(){
+		 x += 10;
+		rectangle.fillRect(0,0,300,x+10)
+	
+	if(x > 290){
+		x = x - 290;
+	}
+}
+	//changer la couleur du canvas
+   
+
+	function color(){
+		rectangle.fillStyle = "red";
+
+	}
+	function origin(){
+		 rectangle.fillStyle = "#efde47";
+	}
+
+	
+
+	</script>
+</body>
+</html>

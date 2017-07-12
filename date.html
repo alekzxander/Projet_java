@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>evaluation Jquer</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	
+
+</head>
+<body>
+	<div class="container">
+		<div class="jumbotron">
+			<h1>Bienvenue, nous somme le <span>jeudi 12 juillet 2017</span></h1>
+		</div>
+	</div>
+	
+	
+
+
+<script type="text/javascript">
+/*creation de la variable qui permet de recuperer la date*/
+	var uneDate = new Date();
+
+	let annee = uneDate.getFullYear();
+	let mois = uneDate.getMonth()+1;
+	let jour = uneDate.getDate();
+
+	let dateDuJour = document.querySelector('span');
+	dateDuJour.innerHTML = "jour " + jour +" mois " + mois +" annee " +annee;
+
+	
+</script>
+</body>
+</html>
